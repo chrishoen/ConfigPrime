@@ -1,0 +1,25 @@
+//********************************************************************
+//********************************************************************
+//********************************************************************
+// Main program parameters.
+
+SectionBegin default
+
+   // Timer variables.
+   TimerPeriod               1000
+   Delay1                    100
+   
+   // If true then enable print view and initialize it with the
+   // given ip address. Print view routes debug prints from the
+   // control communications threads to print view consoles on a
+   // host.
+   PrintViewEnable           true
+   PrintViewIPAddress        192.168.1.134
+
+SectionEnd
+
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+

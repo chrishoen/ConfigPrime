@@ -1,0 +1,33 @@
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin default
+
+   // Test mode 1,2.
+   TestMode               1
+
+   // If true then poll the test thread processor.
+   PollProcessor          false
+
+   // Timer thread priority.
+   TestThreadProcessor    11
+   TestThreadProcessor    -1
+   TestThreadPriority     98
+
+   // Timer thread periods.
+   MonitorThreadPeriod    1000
+   TestThreadPeriod       1
+   TestThreadPeriod       1000
+
+   // Sample window size.
+   SampleSize             10000
+
+   TestThreadPeriod       1
+   SampleSize             10000
+
+   TestThreadPeriod       1
+   StatPeriod             10000
+   
+SectionEnd
+
