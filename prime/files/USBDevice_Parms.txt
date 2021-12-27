@@ -5,8 +5,12 @@
 SectionBegin Default
 
    // Device path.
-   DeviceDevPath               /dev/ttyGS1
-   DeviceDevPath               /dev/ttyGS0
+   DeviceDevPath1              /dev/ttyGS0
+   DeviceDevPath2              /dev/ttyGS1
+
+   // Enables.
+   Enable1                     true
+   Enable2                     true
 
    // Delays.
    Delay1                      1000

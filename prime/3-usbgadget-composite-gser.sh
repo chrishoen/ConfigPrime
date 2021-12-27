@@ -5,13 +5,13 @@ modprobe libcomposite
 # create gadget
 mkdir /sys/kernel/config/usb_gadget/g1
 cd /sys/kernel/config/usb_gadget/g1
-echo "0x1234" > idVendor
-echo "0xabcd" > idProduct
+echo "0x112b" > idVendor
+echo "0x000d" > idProduct
 
 mkdir strings/0x409
 echo "0123456789" > strings/0x409/serialnumber
-echo "chrishoen" > strings/0x409/manufacturer
-echo "my composite" > strings/0x409/product
+echo "Stenograph" > strings/0x409/manufacturer
+echo "Luminex" > strings/0x409/product
 
 # create config
 mkdir configs/c.1
