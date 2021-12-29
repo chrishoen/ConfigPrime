@@ -19,8 +19,12 @@ mkdir configs/c.1/strings/0x409
 echo "my configuration" > configs/c.1/strings/0x409/configuration
 
 # create function
-mkdir functions/acm.usb0
-ln -s functions/acm.usb0 configs/c.1
+mkdir functions/cust1.usb0
+ln -s functions/cust1.usb0 configs/c.1
+
+# create function
+mkdir functions/cust2.usb0
+ln -s functions/cust2.usb0 configs/c.1
 
 # activate
 ls /sys/class/udc > UDC
