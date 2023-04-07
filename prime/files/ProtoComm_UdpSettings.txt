@@ -1,0 +1,59 @@
+//********************************************************************
+//********************************************************************
+//********************************************************************
+SectionBegin Default
+
+   ThreadTimerPeriod           100
+   NumWords                    1000
+   PrintLevel                  2 0
+
+SectionEnd
+
+//********************************************************************
+//********************************************************************
+//********************************************************************
+SectionBegin UdpPeer1
+
+   MyAppNumber                 301
+   
+   // Receive on this port.
+   MyUdpPort                   56001
+   
+   // Transmit to this address and port.
+   OtherUdpAddress             127.0.0.1
+   OtherUdpAddress             192.168.7.2
+   OtherUdpAddress             192.168.1.134
+   OtherUdpPort                56002
+   
+   // If true then use the last receive from ip address as the
+   // next transmit ip address.
+   UdpWrapFlag                 false
+   
+   // If true then broadcast udp sends.
+   UdpBroadcast                false
+   
+SectionEnd
+
+//********************************************************************
+//********************************************************************
+//********************************************************************
+SectionBegin UdpPeer2
+
+   MyAppNumber                 301
+   
+   // Receive on this port.
+   MyUdpPort                   56002
+   
+   // Transmit to this address and port.
+   OtherUdpAddress             127.0.0.1
+   OtherUdpPort                56001
+   
+   // If true then use the last receive from ip address as the
+   // next transmit ip address.
+   UdpWrapFlag                 false
+   
+   // If true then broadcast udp sends.
+   UdpBroadcast                false
+	
+SectionEnd
+

@@ -1,0 +1,30 @@
+record
+wait 20
+pause
+wait 30
+resume
+wait 20
+stop
+exit
+
+
+
+loop 
+red
+endloop
+exit
+
+red   1
+green 2
+blue  3
+exit
+
+red 1
+loop 3
+green 4
+blue 5
+endloop
+exit
+
+
+

@@ -1,0 +1,26 @@
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin default
+
+   // Test mode 1,2.
+   TestMode               1
+
+   // Thread variables.
+   PollProcessor          false
+   TestThreadProcessor    -1
+   TestThreadPriority     98
+
+   // Timer thread periods.
+   MonitorThreadPeriod    1000
+   StatPeriod             10000
+   PeriodUs               1000
+	
+   // Random thread periods.
+   IntervalMeanMs         1
+   IntervalRandomUs       100
+	
+
+SectionEnd
+

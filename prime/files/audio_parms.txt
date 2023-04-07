@@ -1,0 +1,146 @@
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin initial
+
+   InitialSection              playopus
+   
+SectionEnd
+
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin playopus
+
+   FileReaderParms
+   {
+      FilePath                 /opt/prime/mono/kashmir1.opus
+      FileReaderType           opus
+      SampleRate               48000
+   }
+
+   FileWriterParms
+   {
+      FilePath                 /opt/prime/tmp/record.opus
+      FileWriterType           opus
+      SampleRate               44100
+   }
+   
+SectionEnd
+
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin recordopus
+
+   FileReaderParms
+   {
+      FilePath                 /opt/prime/tmp/record.opus
+      FileReaderType           opus
+      SampleRate               48000
+   }
+
+   FileWriterParms
+   {
+      FilePath                 /opt/prime/tmp/record.opus
+      FileWriterType           opus
+      SampleRate               44100
+   }
+   
+SectionEnd
+
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin playwav
+
+   FileReaderParms
+   {
+      FilePath                 /opt/prime/mono/kashmir1.wav
+      FileReaderType           sndfile
+      SampleRate               44100
+   }
+
+   FileWriterParms
+   {
+      FilePath                 /opt/prime/tmp/record.wav
+      FileWriterType           sndfile
+      FileWriterFormat         wav
+      SampleRate               44100
+   }
+   
+SectionEnd
+
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin recordwav
+
+   FileReaderParms
+   {
+      FilePath                 /opt/prime/tmp/record.wav
+      FileReaderType           sndfile
+      SampleRate               44100
+   }
+
+   FileWriterParms
+   {
+      FilePath                 /opt/prime/tmp/record.wav
+      FileWriterType           sndfile
+      FileWriterFormat         wav
+      SampleRate               44100
+   }
+   
+SectionEnd
+
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin recordadpcm
+
+   FileReaderParms
+   {
+      FilePath                 /opt/prime/tmp/record.wav
+      FileReaderType           sndfile
+      SampleRate               44100
+   }
+
+   FileWriterParms
+   {
+      FilePath                 /opt/prime/tmp/record.wav
+      FileWriterType           sndfile
+      FileWriterFormat         adpcm
+      SampleRate               44100
+   }
+   
+SectionEnd
+
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin recordgsm
+
+   FileReaderParms
+   {
+      FilePath                 /opt/prime/tmp/record.wav
+      FileReaderType           sndfile
+      SampleRate               44100
+   }
+
+   FileWriterParms
+   {
+      FilePath                 /opt/prime/tmp/record.wav
+      FileWriterType           sndfile
+      FileWriterFormat         gsm
+      SampleRate               44100
+   }
+   
+SectionEnd
+

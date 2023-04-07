@@ -1,0 +1,38 @@
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin default
+
+   // Monitor variables.
+   MonitorThreadPeriod       1000
+   StatPeriod                10000
+   PollProcessor             true
+
+   // Thread variables.
+   WriterThreadProcessor     -1
+   WriterThreadPriority      80
+   WriterThreadMeanMs        2
+   WriterThreadRandomUs      500
+	
+	
+   // Thread variables.
+   ReaderThreadProcessor     -1
+   ReaderThreadPriority      80
+   ReaderThreadMeanMs        4
+   ReaderThreadRandomUs      1000
+	
+   // Test mode 1,2.
+   WriteTestMode             3
+   ReadTestMode              1
+   NumWrites                 10
+   SleepAfterNotReadyUs      3000
+   SleepAfterOverwriteUs     3000
+	
+   // Suspend test variables.
+   SuspendRandom             20000
+   SuspendSleepMeanMs        200
+   SuspendSleepRandomMs      50 
+
+SectionEnd
+
