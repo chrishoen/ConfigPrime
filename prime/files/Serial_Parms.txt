@@ -6,15 +6,12 @@
 SectionBegin Default
 
    // Serial port setup.
-   SerialPortDevice            /dev/ttyUSB0
+   SerialPortDevice            /dev/ttyGS1
    SerialPortSetup             115200,N,8,1
    SerialRxTimeout             0
 
-	// Serial string port termination modes.
-	TxTermMode                  CRLF
-   RxTermMode                  LF
-
-	TxTermMode                  CR
+   // Serial string port termination modes.
+   TxTermMode                  LF
    RxTermMode                  CRLF
 	
    // If true then use checksums.

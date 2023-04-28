@@ -1,5 +1,5 @@
 #!/bin/bash
-#Serial port. ttyGS0 is catalyst, ttyGS1 is serial
+
 
 modprobe libcomposite
 
@@ -24,8 +24,8 @@ mkdir functions/gser.usb0
 ln -s functions/gser.usb0 configs/c.1
 
 # create function shows up on windows as Stenograph Writer 
-mkdir functions/acm.usb0
-ln -s functions/acm.usb0 configs/c.1
+####mkdir functions/acm.usb0
+####ln -s functions/acm.usb0 configs/c.1
 
 # activate
 ls /sys/class/udc > UDC
