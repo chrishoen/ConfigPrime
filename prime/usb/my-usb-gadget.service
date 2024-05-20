@@ -1,0 +1,12 @@
+[Unit]
+Description=setup usb gadget
+After=multi-user.target
+
+[Service]
+ExecStart=/opt/prime/usb/configure-usb-ncm.sh
+ExecStop=
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

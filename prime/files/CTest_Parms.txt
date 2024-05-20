@@ -1,0 +1,109 @@
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin Default
+
+   // If true then use high process priority.
+   HighProcess                 true
+
+   // Transmit to this address and port.
+   TcpServerAddress            127.0.0.1
+   TcpServerAddress            192.168.1.134
+   TcpServerAddress            192.168.1.200
+   TcpServerAddress            192.168.1.191
+   TcpServerPort               56001
+	
+   // Trace variables.
+   TraceLogEnable              true
+   TraceLogVerbose             false
+   
+   // If true then randomize the delay.
+   SendRecvRandom              false
+   // Delay between consecutive send/recv operations.
+   SendRecvDelay               100
+   // Transmit request message data length.
+   TxDataLength                100
+   // Receive response message data length.
+   RxDataLength                100 
+
+   // Script test variables.
+   SendRecvRandom              false
+   SendRecvDelay               100
+   TxDataLength                1424
+   RxDataLength                1424
+
+   SendRecvRandom              false
+   SendRecvDelay               500
+   TxDataLength                100
+   RxDataLength                100
+
+   SendRecvRandom              true
+   SendRecvDelay               500
+   TxDataLength                100000
+   RxDataLength                100000
+
+   // Retry variables.
+   RetryFlag                   false
+   RetryTimeout                4000
+
+SectionEnd
+
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin Jammer
+
+   // If true then use high process priority.
+   HighProcess                 true
+
+   // Receive on this port.
+   MyUdpAddress                0.0.0.0
+   MyUdpPort                   57001
+   
+   // Transmit to this address and port.
+   OtherUdpAddress             192.168.41.13
+   OtherUdpPort                57003
+	
+   // Trace variables.
+   TraceLogEnable              false
+   TraceLogVerbose             false
+   
+   // Test variables.
+   TxDataLength                100
+
+   // Sleep for random number of ms in interval.
+   JammerSleepMs1              0
+   JammerSleepMs2              20
+
+SectionEnd
+
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin WriterFinder
+
+   // If true then use high process priority.
+   HighProcess                 false
+
+   // Timing.
+   MyTimerPeriod               1000
+   
+   // Receive on this port.
+   MyUdpAddress                0.0.0.0
+   MyUdpAddress                192.168.100.1
+   MyUdpPort                   5015
+   
+   // Transmit to this address and port.
+   OtherUdpPort                5012
+	
+   // Trace variables.
+   TraceLogEnable              false
+   TraceLogVerbose             false
+   
+SectionEnd
+
+
+

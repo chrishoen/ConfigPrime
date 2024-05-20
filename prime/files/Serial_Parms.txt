@@ -7,20 +7,17 @@ SectionBegin Default
 
    // Serial port setup.
    SerialPortDevice            /dev/ttyGS1
+   SerialPortDevice            /dev/rfcomm0
    SerialPortSetup             115200,N,8,1
    SerialRxTimeout             0
 
    // Serial string port termination modes.
    TxTermMode                  LF
-   RxTermMode                  CRLF
-	
-   // If true then use checksums.
-   CheckSumFlag                false
+   RxTermMode                  LF
 
-   // Transfer mode variables.
-   ReadAllFlag                 true
-   WriteAllFlag                false
-   RxReqNumBytes               10000
-
+   // Thread variables.
+   ThreadTimerPeriod           50
+   TraceLogEnable              false
+   
 SectionEnd
 

@@ -5,7 +5,6 @@ SectionBegin Default
 
    ThreadTimerPeriod           100
    NumWords                    1000
-   PrintLevel                  2 0
 
 SectionEnd
 
@@ -16,13 +15,14 @@ SectionBegin UdpPeer1
 
    MyAppNumber                 301
    
-   // Receive on this port.
+   // Receive on address and port.
+   MyUdpAddress                192.168.100.1
    MyUdpPort                   56001
-   
+      
    // Transmit to this address and port.
    OtherUdpAddress             127.0.0.1
-   OtherUdpAddress             192.168.7.2
    OtherUdpAddress             192.168.1.134
+   OtherUdpAddress             192.168.100.232
    OtherUdpPort                56002
    
    // If true then use the last receive from ip address as the
@@ -39,13 +39,14 @@ SectionEnd
 //********************************************************************
 SectionBegin UdpPeer2
 
-   MyAppNumber                 301
+   MyAppNumber                 302
    
    // Receive on this port.
    MyUdpPort                   56002
    
    // Transmit to this address and port.
    OtherUdpAddress             127.0.0.1
+   OtherUdpAddress             192.168.1.207
    OtherUdpPort                56001
    
    // If true then use the last receive from ip address as the
