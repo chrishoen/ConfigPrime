@@ -5,17 +5,14 @@
 SectionBegin Default
 
    // If true then use high process priority.
-   HighProcess                 true
+   HighProcess                 false
 
    // Transmit to this address and port.
-   TcpServerAddress            127.0.0.1
-   TcpServerAddress            192.168.1.134
-   TcpServerAddress            192.168.1.200
-   TcpServerAddress            192.168.1.191
+   TcpServerAddress            192.168.100.195
    TcpServerPort               56001
 	
    // Trace variables.
-   TraceLogEnable              true
+   TraceLogEnable              false
    TraceLogVerbose             false
    
    // If true then randomize the delay.
@@ -33,18 +30,18 @@ SectionBegin Default
    TxDataLength                1424
    RxDataLength                1424
 
-   SendRecvRandom              false
-   SendRecvDelay               500
-   TxDataLength                100
-   RxDataLength                100
-
    SendRecvRandom              true
    SendRecvDelay               500
    TxDataLength                100000
    RxDataLength                100000
 
+   SendRecvRandom              false
+   SendRecvDelay               100
+   TxDataLength                100
+   RxDataLength                100
+
    // Retry variables.
-   RetryFlag                   false
+   RetryFlag                   true
    RetryTimeout                4000
 
 SectionEnd
@@ -63,7 +60,7 @@ SectionBegin Jammer
    MyUdpPort                   57001
    
    // Transmit to this address and port.
-   OtherUdpAddress             192.168.41.13
+   OtherUdpAddress             192.168.100.195
    OtherUdpPort                57003
 	
    // Trace variables.
@@ -92,7 +89,6 @@ SectionBegin WriterFinder
    MyTimerPeriod               1000
    
    // Receive on this port.
-   MyUdpAddress                0.0.0.0
    MyUdpAddress                192.168.100.1
    MyUdpPort                   5015
    
