@@ -89,7 +89,7 @@ SectionBegin WriterFinder
    MyTimerPeriod               1000
    
    // Receive on this port.
-   MyUdpAddress                192.168.100.1
+   MyUdpAddress                192.168.100.156
    MyUdpPort                   5015
    
    // Transmit to this address and port.
