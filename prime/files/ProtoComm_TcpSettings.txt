@@ -15,6 +15,7 @@ SectionEnd
 SectionBegin TcpServer
 
    MyAppNumber                 101 
+   TcpServerAddress            192.168.100.1
    TcpServerPort               55001
    TcpMaxSessions              4
 
@@ -26,9 +27,7 @@ SectionEnd
 SectionBegin TcpClient1
 
    MyAppNumber                 201 
-   TcpServerAddress            127.0.0.1
-   TcpServerAddress            192.168.7.2
-   TcpServerAddress            192.168.1.134
+   TcpServerAddress            192.168.100.1
    TcpServerPort               55001
 
 SectionEnd

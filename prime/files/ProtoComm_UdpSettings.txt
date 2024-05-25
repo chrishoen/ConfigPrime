@@ -16,13 +16,11 @@ SectionBegin UdpPeer1
    MyAppNumber                 301
    
    // Receive on address and port.
-   MyUdpAddress                192.168.100.156
+   MyUdpAddress                192.168.100.1
    MyUdpPort                   56001
       
    // Transmit to this address and port.
-   OtherUdpAddress             127.0.0.1
-   OtherUdpAddress             192.168.1.134
-   OtherUdpAddress             192.168.100.232
+   OtherUdpAddress             192.168.100.156
    OtherUdpPort                56002
    
    // If true then use the last receive from ip address as the
@@ -42,11 +40,11 @@ SectionBegin UdpPeer2
    MyAppNumber                 302
    
    // Receive on this port.
+   MyUdpAddress                192.168.100.156
    MyUdpPort                   56002
    
    // Transmit to this address and port.
-   OtherUdpAddress             127.0.0.1
-   OtherUdpAddress             192.168.1.207
+   OtherUdpAddress             192.168.100.1
    OtherUdpPort                56001
    
    // If true then use the last receive from ip address as the
