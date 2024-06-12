@@ -1,0 +1,64 @@
+//********************************************************************
+//********************************************************************
+//********************************************************************
+// windows windows windows windows windows windows windows 
+
+SectionBegin Default
+
+   // Serial port setup.
+   CommType                    tcp
+   CommSerialSubType           none
+   
+   SerialPortDevice            COM3
+   SerialPortSetup             115200,N,8,1
+   SerialRxTimeout             0
+	
+   // Tcp server.   	
+   TcpServerAddress            192.168.101.195
+   TcpServerPort               80
+
+   // Trace variables.
+   TraceLogEnable              false
+
+   // Test variables.
+   TestFlag                    false
+
+   TestDelay                   400
+   TxDataLength                4000
+   RxDataLength                4000
+   
+   TestDelay                   100
+   TxDataLength                512
+   RxDataLength                512
+
+   // Retry variables.
+   RetryFlag                   true
+   RetryTimeout                2000
+
+SectionEnd
+
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin NoSerial
+
+   // Serial port. ttyGS0 is catalyst, ttyGS1 is serial
+   SerialEnable                false
+	
+SectionEnd
+
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin Test1
+
+   // 0 means no test.
+   // 1 means short checksum test.
+   TestMode                    1
+
+SectionEnd
+
+
+##?#USB#VID_112B&PID_000D&MI_00#6&1ea389e9&0&0000#{202e68c5-5980-4a60-b761-77c4de9d5dbf}

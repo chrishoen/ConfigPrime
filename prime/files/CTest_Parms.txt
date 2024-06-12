@@ -8,7 +8,7 @@ SectionBegin Default
    HighProcess                 false
 
    // Transmit to this address and port.
-   TcpServerAddress            192.168.100.195
+   TcpServerAddress            192.168.101.195
    TcpServerPort               56001
 	
    // Trace variables.
@@ -50,6 +50,31 @@ SectionEnd
 //********************************************************************
 //********************************************************************
 
+SectionBegin WriterFinder
+
+   // If true then use high process priority.
+   HighProcess                 false
+
+   // Timing.
+   MyTimerPeriod               1000
+   
+   // Receive on this port.
+   MyUdpAddress                192.168.101.156
+   MyUdpPort                   5015
+   
+   // Transmit to this address and port.
+   OtherUdpPort                5012
+	
+   // Trace variables.
+   TraceLogEnable              false
+   TraceLogVerbose             false
+   
+SectionEnd
+
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
 SectionBegin Jammer
 
    // If true then use high process priority.
@@ -74,31 +99,6 @@ SectionBegin Jammer
    JammerSleepMs1              0
    JammerSleepMs2              20
 
-SectionEnd
-
-//********************************************************************
-//********************************************************************
-//********************************************************************
-
-SectionBegin WriterFinder
-
-   // If true then use high process priority.
-   HighProcess                 false
-
-   // Timing.
-   MyTimerPeriod               1000
-   
-   // Receive on this port.
-   MyUdpAddress                192.168.100.156
-   MyUdpPort                   5015
-   
-   // Transmit to this address and port.
-   OtherUdpPort                5012
-	
-   // Trace variables.
-   TraceLogEnable              false
-   TraceLogVerbose             false
-   
 SectionEnd
 
 

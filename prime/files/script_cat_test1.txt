@@ -1,0 +1,13 @@
+HelloMsg
+loop
+   OpenFileMsg
+endloop
+JobDataMsg
+ReadKbdCalMsg
+ReadKbdConstMsg
+HelloMsg
+ReadKbdConstMsg
+loop
+   JobDataMsg
+endloop
+exit
