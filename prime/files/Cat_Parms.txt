@@ -20,6 +20,9 @@ SectionBegin Default
    // Trace variables.
    TraceLogEnable              false
 
+   // JobData variables.
+   JobDataDelay                150
+
    // Test variables.
    TestFlag                    false
 
