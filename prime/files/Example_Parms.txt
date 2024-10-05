@@ -13,7 +13,7 @@ SectionBegin default
    // given ip address. Print view routes debug prints from the
    // control communications threads to print view consoles on a
    // host.
-   PrintViewEnable           true
+   PrintViewEnable           false
    PrintViewIPAddress        192.168.1.134
 
 SectionEnd

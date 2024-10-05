@@ -23,7 +23,7 @@ SectionBegin default
    ReaderThreadRandomUs      1000
 	
    // Test mode 1,2.
-   WriteTestMode             3
+   WriteTestMode             2
    ReadTestMode              1
    NumWrites                 10
    SleepAfterNotReadyUs      3000
