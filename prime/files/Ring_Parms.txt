@@ -25,7 +25,7 @@ SectionBegin default
    // Test mode 1,2.
    WriteTestMode             3
    ReadTestMode              1
-   NumWrites                 10
+   NumWrites                 100
    SleepAfterNotReadyUs      3000
    SleepAfterOverwriteUs     3000
 	

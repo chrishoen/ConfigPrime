@@ -4,9 +4,6 @@
 
 SectionBegin default
 
-   // Select 1,2 value,object
-   Select                    1
-   
    // Monitor variables.
    MonitorThreadPeriod       1000
    StatPeriod                10000
@@ -25,15 +22,19 @@ SectionBegin default
    ReaderThreadMeanMs        4
    ReaderThreadRandomUs      1000
 	
+   // Select 1,2 value,object
+   Select                    3
+   
    // Test mode 1,2.
-   WriteTestMode             1
-   ReadTestMode              1
+   WriteTestMode             2
+   ReadTestMode              2
    NumWrites                 100
    SleepAfterNotReadyUs      200
    SleepAfterNotReadyUs      2000
 	
    // Suspend test variables.
-   SuspendRandom             10000
+   WriteSuspendRandom        10000
+   ReadSuspendRandom         500000
    SuspendSleepMeanMs        100
    SuspendSleepRandomMs      10 
 
