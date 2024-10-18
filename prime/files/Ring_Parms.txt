@@ -26,7 +26,7 @@ SectionBegin default
    // Test mode 1,2.
    WriteTestMode             1
    ReadTestMode              1
-   NumWrites                 20
+   NumWrites                 100
 
    // Read sleep.
    ReadSleepMeanMs           2
