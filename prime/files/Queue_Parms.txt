@@ -4,27 +4,74 @@
 
 SectionBegin default
 
+   // Scope  1,2. cpu,rpu
+   // Select 1,2,3. value,object,object
+   Scope                     1
+   Select                    2
+
    // Monitor variables.
    MonitorThreadPeriod       1000
    StatPeriod                10000
    PollProcessor             true
 
    // Thread variables.
-   WriterThreadProcessor     1
+   WriterThreadProcessor     0
    WriterThreadPriority      80
    WriterThreadMeanMs        1
    WriterThreadRandomUs      100
 	
 	
    // Thread variables.
-   ReaderThreadProcessor     2
+   ReaderThreadProcessor     1
+   ReaderThreadPriority      80
+	
+   // Test mode 1,2.
+   WriteTestMode             1
+   ReadTestMode              1
+   NumWrites                 50
+
+   // Read sleep.
+   ReadSleepMeanMs           2
+   ReadSleepRandomUs         100
+	
+   // Suspend test variables.
+   WriteSuspendRandom        2000
+   ReadSuspendRandom         20000
+   SuspendSleepMeanMs        100
+   SuspendSleepRandomMs      10 
+
+SectionEnd
+
+//********************************************************************
+//********************************************************************
+//********************************************************************
+
+SectionBegin original
+
+   // Monitor variables.
+   MonitorThreadPeriod       1000
+   StatPeriod                10000
+   PollProcessor             true
+
+   // Thread variables.
+   WriterThreadProcessor     0
+   WriterThreadPriority      80
+   WriterThreadMeanMs        1
+   WriterThreadRandomUs      100
+	
+	
+   // Thread variables.
+   ReaderThreadProcessor     1
    ReaderThreadPriority      80
    ReaderThreadMeanMs        4
    ReaderThreadRandomUs      1000
+
 	
-   // Select 1,2 value,object
-   Select                    3
-   
+   // Scope  1,2. cpu,rpu
+   // Select 1,2,3. value,object,object
+   Scope                     2
+   Select                    1
+
    // Test mode 1,2.
    WriteTestMode             2
    ReadTestMode              2
@@ -39,45 +86,3 @@ SectionBegin default
    SuspendSleepRandomMs      10 
 
 SectionEnd
-
-//********************************************************************
-//********************************************************************
-//********************************************************************
-
-SectionBegin original
-
-   // Select 1,2 value,object
-   Select                    1
-   
-   // Monitor variables.
-   MonitorThreadPeriod       1000
-   StatPeriod                10000
-   PollProcessor             true
-
-   // Thread variables.
-   WriterThreadProcessor     1
-   WriterThreadPriority      80
-   WriterThreadMeanMs        2
-   WriterThreadRandomUs      500
-	
-	
-   // Thread variables.
-   ReaderThreadProcessor     2
-   ReaderThreadPriority      80
-   ReaderThreadMeanMs        4
-   ReaderThreadRandomUs      1000
-	
-   // Test mode 1,2.
-   WriteTestMode             3
-   ReadTestMode              1
-   NumWrites                 10
-   SleepAfterNotReadyUs      3000
-   SleepAfterOverwriteUs     3000
-	
-   // Suspend test variables.
-   SuspendRandom             20000
-   SuspendSleepMeanMs        200
-   SuspendSleepRandomMs      50 
-
-SectionEnd
-
