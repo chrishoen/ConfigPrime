@@ -1,0 +1,8 @@
+### comm-test
+### screen -t comms 1 /opt/ConfigPrime/prime/bin/Test
+screen -t comms 1 /opt/ConfigPrime/prime/launchcomm.sh
+
+
+
+
+
